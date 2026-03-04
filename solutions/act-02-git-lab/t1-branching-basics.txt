@@ -1,0 +1,14 @@
+git checkout -b branch-1
+Switched to a new branch 'branch-1'
+
+git add .\solutions\act-02-git-lab\t1-branching-basics.txt
+
+git commit -m "Initial commit"
+[branch-1 (root-commit) ac59246] Initial commit
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 solutions/act-02-git-lab/t1-branching-basics.txt
+
+ git checkout -b main     
+Switched to a new branch 'main'
+PS C:\Users\User\OneDrive\Десктоп\test> git branch
+  branch-1
