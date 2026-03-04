@@ -1,0 +1,6 @@
+git add .\solutions\act-02-git-lab\t3-merge.txt
+
+git commit -m "Added files t3-merge"
+[main 1082e73] Added files t3-merge
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 solutions/act-02-git-lab/t3-merge.txt
