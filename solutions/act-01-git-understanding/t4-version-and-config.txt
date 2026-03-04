@@ -1,0 +1,32 @@
+git init
+Initialized empty Git repository in C:/Users/User/OneDrive/Десктоп/kiii_1/.git/
+
+git --version
+git version 2.48.1.windows.1
+
+git config --global user.name
+Sandra Ivanova
+
+git config --global user.email
+sandraivanova1@yahoo.com
+
+git config --list
+diff.astextplain.textconv=astextplain
+filter.lfs.clean=git-lfs clean -- %f
+filter.lfs.smudge=git-lfs smudge -- %f
+filter.lfs.process=git-lfs filter-process
+filter.lfs.required=true
+http.sslbackend=openssl
+http.sslcainfo=C:/Program Files/Git/mingw64/etc/ssl/certs/ca-bundle.crt
+core.autocrlf=true
+core.fscache=true
+core.symlinks=false
+pull.rebase=false
+credential.helper=manager
+credential.https://dev.azure.com.usehttppath=true
+init.defaultbranch=master
+user.name=Sandra Ivanova
+user.email=sandraivanova1@yahoo.com
+color.ui=true
+core.autocrlf=true
+:
