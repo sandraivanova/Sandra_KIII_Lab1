@@ -1,2 +1,20 @@
-git remote -v
+commandsL git remote -v
 
+commands: git remote add origin https://github.com/sandraivanova/Sandra_KIII_Lab1.git
+
+commands: PS C:\Users\User\OneDrive\Десктоп\test> git remote -v
+output:
+origin  https://github.com/sandraivanova/Sandra_KIII_Lab1.git (fetch)
+origin  https://github.com/sandraivanova/Sandra_KIII_Lab1.git (push)
+
+PS C:\Users\User\OneDrive\Десктоп\test> git push -u origin main
+Enumerating objects: 49, done.
+Counting objects: 100% (49/49), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (28/28), done.
+Writing objects: 100% (49/49), 4.24 KiB | 160.00 KiB/s, done.
+Total 49 (delta 13), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (13/13), done.
+To https://github.com/sandraivanova/Sandra_KIII_Lab1.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
