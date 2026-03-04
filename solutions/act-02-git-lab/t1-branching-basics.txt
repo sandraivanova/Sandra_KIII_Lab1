@@ -12,3 +12,15 @@ git commit -m "Initial commit"
 Switched to a new branch 'main'
 PS C:\Users\User\OneDrive\Десктоп\test> git branch
   branch-1
+
+  git status -s
+ M solutions/act-02-git-lab/t1-branching-basics.txt
+
+ git add .\solutions\act-02-git-lab\t1-branching-basics.txt
+
+ git status -s         
+M  solutions/act-02-git-lab/t1-branching-basics.txt
+
+git commit -m "Second commit with the modifed file"  
+[main 80aad68] Second commit with the modifed file
+ 1 file changed, 14 insertions(+)
