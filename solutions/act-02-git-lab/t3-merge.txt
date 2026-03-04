@@ -5,6 +5,19 @@ git commit -m "Added files t3-merge"
  1 file changed, 0 insertions(+), 0 deletions(-)
  create mode 100644 solutions/act-02-git-lab/t3-merge.txt
 
+ git branch topic
+PS C:\Users\User\OneDrive\Десктоп\test> git branch
+  branch-1
+* main
+  topic
+PS C:\Users\User\OneDrive\Десктоп\test> git checkout -b topic
+fatal: a branch named 'topic' already exists
+PS C:\Users\User\OneDrive\Десктоп\test> git checkout topic   
+Switched to branch 'topic'
+PS C:\Users\User\OneDrive\Десктоп\test> git status 
+On branch topic
+nothing to commit, working tree clean
+
  git checkout main 
 Switched to branch 'main'
 
