@@ -21,3 +21,46 @@ nothing to commit, working tree clean
  git checkout main 
 Switched to branch 'main'
 
+git merge topic
+Auto-merging solutions/act-02-git-lab/t3-merge.txt
+CONFLICT (content): Merge conflict in solutions/act-02-git-lab/t3-merge.txt
+Automatic merge failed; fix conflicts and then commit the result.
+PS C:\Users\User\OneDrive\Десктоп\test> git log --oneline --decorate --graph --all
+* e23621a (HEAD -> main) Added changes
+| * c0c2b6b (topic) Added commit changes
+Auto-merging solutions/act-02-git-lab/t3-merge.txt
+CONFLICT (content): Merge conflict in solutions/act-02-git-lab/t3-merge.txt
+Automatic merge failed; fix conflicts and then commit the result.
+PS C:\Users\User\OneDrive\Десктоп\test> git log --oneline --decorate --graph --all
+* e23621a (HEAD -> main) Added changes
+| * c0c2b6b (topic) Added commit changes
+|/
+* 1e94229 Addded logs
+PS C:\Users\User\OneDrive\Десктоп\test> git log --oneline --decorate --graph --all
+* e23621a (HEAD -> main) Added changes
+| * c0c2b6b (topic) Added commit changes
+| * c0c2b6b (topic) Added commit changes
+|/
+* 1e94229 Addded logs
+* 1082e73 Added files t3-merge
+* 1e94229 Addded logs
+* 1082e73 Added files t3-merge
+* 4c73926 Commiting the swictching of the branches
+* 4c73926 Commiting the swictching of the branches
+* c8ff22f Added commands to txt file
+* 80aad68 Second commit with the modifed file
+* ac59246 (branch-1) Initial commit
+PS C:\Users\User\OneDrive\Десктоп\test> git commit -m "Resolved conflicts"
+[main 7f7ef98] Resolved conflicts
+PS C:\Users\User\OneDrive\Десктоп\test> git log --oneline --decorate --graph --all
+*   7f7ef98 (HEAD -> main) Resolved conflicts
+|\
+| * c0c2b6b (topic) Added commit changes
+* | e23621a Added changes
+|/
+* 1e94229 Addded logs
+* 1082e73 Added files t3-merge
+* 4c73926 Commiting the swictching of the branches
+* c8ff22f Added commands to txt file
+* 80aad68 Second commit with the modifed file
+* ac59246 (branch-1) Initial commit
