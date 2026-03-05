@@ -1,0 +1,24 @@
+comand:git tag -a v1.4 -m "my version 1.4"
+
+comand:git show v1.4
+
+output: tag v1.4
+Tagger: Sandra Ivanova <sandraivanova1@yahoo.com>
+Date:   Thu Mar 5 10:18:41 2026 +0100
+
+my version 1.4
+
+commit 379289a78a9d8324ed02345aecd83949247662e3 (HEAD -> topicHomework, tag: v1.4)
+Author: Sandra Ivanova <sandraivanova1@yahoo.com>
+Date:   Thu Mar 5 09:58:39 2026 +0100
+
+    second commit for homework
+
+diff --git a/solutions/act-03-git-homework/t3-rebase.txt b/solutions/act-03-git-homework/t3-rebase.txt
+index 66814ce..b425fd5 100644
+--- a/solutions/act-03-git-homework/t3-rebase.txt
++++ b/solutions/act-03-git-homework/t3-rebase.txt
+@@ -46,4 +46,78 @@ git commit -m "second commit for homework"
+ [topicHomework 9dd331a] second commit for homework
+  1 file changed, 30 insertions(+)
+
