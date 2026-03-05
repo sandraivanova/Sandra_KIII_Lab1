@@ -1,0 +1,49 @@
+git checkout -b topicHomework
+Switched to a new branch 'topicHomework'
+
+PS C:\Users\User\OneDrive\Десктоп\kiii_1\solutions\act-03-git-homework> git branch
+  master
+  newBranch
+  task3
+  topic
+* topicHomework
+
+git add t3-rebase.txt
+PS C:\Users\User\OneDrive\Десктоп\kiii_1\solutions\act-03-git-homework> git status
+On branch topicHomework
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   ../act-02-git-lab/t1-branching-basics.txt
+        new file:   t3-rebase.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        ../act-02-git-lab/t3-merge.txt
+        ../act-02-git-lab/t5-remotes.txt\
+
+git commit -m "first commit for homework"
+[topicHomework c091190] first commit for homework
+ 2 files changed, 34 insertions(+)
+ create mode 100644 solutions/act-02-git-lab/t1-branching-basics.txt
+ create mode 100644 solutions/act-03-git-homework/t3-rebase.txt
+
+ --nova promena pravam
+ git add t3-rebase.txt 
+PS C:\Users\User\OneDrive\Десктоп\kiii_1\solutions\act-03-git-homework> git status
+On branch topicHomework
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   t3-rebase.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        ../act-02-git-lab/t3-merge.txt
+        ../act-02-git-lab/t5-remotes.txt
+
+PS C:\Users\User\OneDrive\Десктоп\kiii_1\solutions\act-03-git-homework> git commit -m "second commit for homework"
+
+git commit -m "second commit for homework"
+[topicHomework 9dd331a] second commit for homework
+ 1 file changed, 30 insertions(+)
+
+ --nova promena za master pravam
