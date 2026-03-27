@@ -1,0 +1,104 @@
+mkdir docker-logs-homework
+>> 
+
+
+    Directory: C:\Users\User\OneDrive\Десктоп\kiii_1\docker-python-homework\nginx-volume-test
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----         3/12/2026   1:11 PM                docker-logs-homework
+
+PS C:\Users\User\OneDrive\Десктоп\kiii_1\docker-python-homework\nginx-volume-test> cd docker-logs-homework
+PS C:\Users\User\OneDrive\Десктоп\kiii_1\docker-python-homework\nginx-volume-test\docker-logs-homework> 
+
+PS C:\Users\User\OneDrive\Десктоп\kiii_1\docker-python-homework\nginx-volume-test\docker-logs-homework> echo FROM alpine > Dockerfile
+>> 
+PS C:\Users\User\OneDrive\Десктоп\kiii_1\docker-python-homework\nginx-volume-test\docker-logs-homework> echo CMD sh -c 'while true; do echo "Docker log entry $(date)"; sleep 2; done' >> Dockerfile
+
+
+PS C:\Users\User\OneDrive\Десктоп\kiii_1\docker-python-homework\nginx-volume-test\docker-logs-homework> cat Dockerfile
+FROM alpine
+CMD sh -c "while true; do echo Docker log entry $(date); sleep 2; done"
+
+PS C:\Users\User\OneDrive\Десктоп\kiii_1\docker-python-homework\nginx-volume-test\docker-logs-homework> docker build -t docker-log-generator:v1 .
+[+] Building 2.1s (5/5) FINISHED                                                                                    docker:desktop-linux
+ => [internal] load build definition from Dockerfile                                                                                0.1s
+ => => transferring dockerfile: 123B                                                                                                0.0s
+ => [internal] load metadata for docker.io/library/alpine:latest                                                                    0.1s
+ => [internal] load .dockerignore                                                                                                   0.1s
+ => => transferring context: 2B                                                                                                     0.0s
+ => [1/1] FROM docker.io/library/alpine:latest@sha256:a8560b36e8b8210634f77d9f7f9efd7ffa463e380b75e2e74aff4511df3ef88c              1.4s
+ => => resolve docker.io/library/alpine:latest@sha256:a8560b36e8b8210634f77d9f7f9efd7ffa463e380b75e2e74aff4511df3ef88c              1.4s
+ => exporting to image                                                                                                              0.2s
+ => => exporting layers                                                                                                             0.0s
+ => => exporting manifest sha256:5178b9eecfd46aea2c21ee7e85abd9c96540aad31ae58957886fba6e24851299                                   0.0s
+ => => exporting config sha256:2078a7e0b89d8bf271ee1ca329fad25ad73fd5aa6a6fd3c4a043ca3cd44d843c                                     0.0s
+ => => exporting attestation manifest sha256:3f2f3998cf9fc639d33544cf7d81a64be0897409c5139a788d0e4ce84ba37081                       0.1s
+ => => exporting manifest list sha256:2257b56a7236aaa8f22d2bc4e596aebdde353ecd630aaa4fc98f050fd744b656                              0.0s
+ => => naming to docker.io/library/docker-log-generator:v1                                                                          0.0s
+ => => unpacking to docker.io/library/docker-log-generator:v1                                                                       0.0s
+
+ 1 warning found (use docker --debug to expand):
+ - JSONArgsRecommended: JSON arguments recommended for CMD to prevent unintended behavior related to OS signals (line 2)
+PS C:\Users\User\OneDrive\Десктоп\kiii_1\docker-python-homework\nginx-volume-test\docker-logs-homework> docker run -d docker-log-generator:v1
+>>
+3eb7d8bf80bf06a034c4f3417314af6262b86c63cc4e003a4b631a26469d5a1c
+PS C:\Users\User\OneDrive\Десктоп\kiii_1\docker-python-homework\nginx-volume-test\docker-logs-homework> docker logs 3eb7d8bf80bf06a034c4f3417314af6262b86c63cc4e003a4b631a26469d5a1c
+Docker log entry Thu Mar 12 12:15:49 UTC 2026
+Docker log entry Thu Mar 12 12:15:49 UTC 2026
+Docker log entry Thu Mar 12 12:15:49 UTC 2026
+Docker log entry Thu Mar 12 12:15:49 UTC 2026
+Docker log entry Thu Mar 12 12:15:49 UTC 2026
+Docker log entry Thu Mar 12 12:15:49 UTC 2026
+Docker log entry Thu Mar 12 12:15:49 UTC 2026
+Docker log entry Thu Mar 12 12:15:49 UTC 2026
+Docker log entry Thu Mar 12 12:15:49 UTC 2026
+Docker log entry Thu Mar 12 12:15:49 UTC 2026
+Docker log entry Thu Mar 12 12:15:49 UTC 2026
+Docker log entry Thu Mar 12 12:15:49 UTC 2026
+Docker log entry Thu Mar 12 12:15:49 UTC 2026
+Docker log entry Thu Mar 12 12:15:49 UTC 2026
+Docker log entry Thu Mar 12 12:15:49 UTC 2026
+Docker log entry Thu Mar 12 12:15:49 UTC 2026
+Docker log entry Thu Mar 12 12:15:49 UTC 2026
+
+
+PS C:\Users\User\OneDrive\Десктоп\kiii_1\docker-python-homework\nginx-volume-test\docker-logs-homework> docker logs 3eb7d8bf80bf06a034c4f3417314af6262b86c63cc4e003a4b631a26469d5a1c
+Docker log entry Thu Mar 12 12:15:50 UTC 2026
+Docker log entry Thu Mar 12 12:15:50 UTC 2026
+Docker log entry Thu Mar 12 12:15:50 UTC 2026
+Docker log entry Thu Mar 12 12:15:50 UTC 2026
+Docker log entry Thu Mar 12 12:15:50 UTC 2026
+Docker log entry Thu Mar 12 12:15:50 UTC 2026
+Docker log entry Thu Mar 12 12:15:50 UTC 2026
+Docker log entry Thu Mar 12 12:15:50 UTC 2026
+Docker log entry Thu Mar 12 12:15:50 UTC 2026
+Docker log entry Thu Mar 12 12:15:50 UTC 2026
+Docker log entry Thu Mar 12 12:15:50 UTC 2026
+Docker log entry Thu Mar 12 12:15:50 UTC 2026
+Docker log entry Thu Mar 12 12:15:50 UTC 2026
+Docker log entry Thu Mar 12 12:15:50 UTC 2026
+Docker log entry Thu Mar 12 12:15:50 UTC 2026
+Docker log entry Thu Mar 12 12:15:50 UTC 2026
+Docker log entry Thu Mar 12 12:15:50 UTC 2026
+Docker log entry Thu Mar 12 12:15:50 UTC 2026
+Docker log entry Thu Mar 12 12:15:50 UTC 2026
+Docker log entry Thu Mar 12 12:15:50 UTC 2026
+Docker log entry Thu Mar 12 12:15:50 UTC 2026
+Docker log entry Thu Mar 12 12:15:50 UTC 2026
+Docker log entry Thu Mar 12 12:15:50 UTC 2026
+Docker log entry Thu Mar 12 12:15:50 UTC 2026
+Docker log entry Thu Mar 12 12:15:50 UTC 2026
+Docker log entry Thu Mar 12 12:15:50 UTC 2026
+Docker log entry Thu Mar 12 12:15:50 UTC 2026
+Docker log entry Thu Mar 12 12:15:50 UTC 2026
+Docker log entry Thu Mar 12 12:15:50 UTC 2026
+Docker log entry Thu Mar 12 12:15:50 UTC 2026
+Docker log entry Thu Mar 12 12:15:50 UTC 2026
+Docker log entry Thu Mar 12 12:15:50 UTC 2026
+Docker log entry Thu Mar 12 12:15:50 UTC 2026
+Docker log entry Thu Mar 12 12:15:50 UTC 2026
+PS C:\Users\User\OneDrive\Десктоп\kiii_1\docker-python-homework\nginx-volume-test\docker-logs-homework> docker stop 3eb7d8bf80bf06a034c4f3417314af6262b86c63cc4e003a4b631a26469d5a1c
+3eb7d8bf80bf06a034c4f3417314af6262b86c63cc4e003a4b631a26469d5a1c
+PS C:\Users\User\OneDrive\Десктоп\kiii_1\docker-python-homework\nginx-volume-test\docker-logs-homework> 

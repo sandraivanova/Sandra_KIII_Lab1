@@ -1,0 +1,28 @@
+$ docker compose stop
+[+] Stopping 2/2
+ ✔ Container compose-lab-web-1    Stopped
+ ✔ Container compose-lab-redis-1  Stopped
+
+$ docker compose ps
+NAME                  IMAGE          COMMAND                  SERVICE   CREATED         STATUS         PORTS
+compose-lab-redis-1   redis:alpine   "docker-entrypoint.s…"   redis     10 minutes ago  Exited (0)     6379/tcp
+compose-lab-web-1     redis:alpine   "docker-entrypoint.s…"   web       10 minutes ago  Exited (0)     0.0.0.0:5000->5000/tcp, 6379/tcp
+
+$ docker compose rm -f
+[+] Removing 2/2
+ ✔ Container compose-lab-web-1    Removed
+ ✔ Container compose-lab-redis-1  Removed
+
+$ docker compose up -d
+[+] Running 3/3
+ ✔ Network compose-lab_default    Created
+ ✔ Container compose-lab-redis-1  Started
+ ✔ Container compose-lab-web-1    Started
+
+$ docker compose down
+[+] Running 3/3
+ ✔ Container compose-lab-web-1    Removed
+ ✔ Container compose-lab-redis-1  Removed
+ ✔ Network compose-lab_default    Removed
+
+Note: docker compose stop only stops containers without removing them; docker compose rm removes stopped containers but leaves networks and other resources; docker compose down stops and removes containers, networks, and related resources, effectively cleaning up the entire project.

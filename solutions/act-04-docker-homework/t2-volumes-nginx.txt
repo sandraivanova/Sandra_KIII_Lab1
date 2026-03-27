@@ -1,0 +1,106 @@
+PS C:\Users\User\OneDrive\Десктоп\kiii_1\docker-python-homework> mkdir nginx-volume-test
+
+
+    Directory: C:\Users\User\OneDrive\Десктоп\kiii_1\docker-python-homework
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----         3/12/2026  12:29 PM                nginx-volume-test
+
+
+PS C:\Users\User\OneDrive\Десктоп\kiii_1\docker-python-homework> cd nginx-volume-test
+PS C:\Users\User\OneDrive\Десктоп\kiii_1\docker-python-homework\nginx-volume-test> 
+
+PS C:\Users\User\OneDrive\Десктоп\kiii_1\docker-python-homework\nginx-volume-test> echo '<h1>Hello from Volume Page</h1>' > index.html
+>> 
+PS C:\Users\User\OneDrive\Десктоп\kiii_1\docker-python-homework\nginx-volume-test> cat index.html
+<h1>Hello from Volume Page</h1>
+
+
+PS C:\Users\User\OneDrive\Десктоп\kiii_1\docker-python-homework\nginx-volume-test> docker run -d -p 8085:80 -v "$(pwd)/index.html:/usr/share/nginx/html/index.html" nginx:alpine
+>> 
+Unable to find image 'nginx:alpine' locally
+alpine: Pulling from library/nginx
+Digest: sha256:f46cb72c7df02710e693e863a983ac42f6a9579058a59a35f1ae36c9958e4ce0
+Status: Downloaded newer image for nginx:alpine
+fe4afea7fb4f66e996423f41ecf381341ed84a582987d3e52abeb258dcb4736d
+
+
+PS C:\Users\User\OneDrive\Десктоп\kiii_1\docker-python-homework\nginx-volume-test> curl http://localhost:8085
+>>
+
+Security Warning: Script Execution Risk
+Invoke-WebRequest parses the content of the web page. Script code in the web page might be run when the page is parsed.
+      RECOMMENDED ACTION:
+      Use the -UseBasicParsing switch to avoid script code execution.
+
+      Do you want to continue?
+
+[Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "N"): Y
+
+
+StatusCode        : 200
+StatusDescription : OK
+Content           : ÿþ<h1>Hello from Volume Page</h1>
+
+RawContent        : HTTP/1.1 200 OK
+                    Connection: keep-alive
+                    Accept-Ranges: bytes
+                    Content-Length: 68
+                    Content-Type: text/html
+                    Date: Thu, 12 Mar 2026 11:32:11 GMT
+                    ETag: "69b2a3d7-44"
+                    Last-Modified: Thu, 12 Mar 2026 11...
+Forms             : {}
+Headers           : {[Connection, keep-alive], [Accept-Ranges, bytes], [Content-Length, 68], [Content-Type, text/html]...}
+Images            : {}
+InputFields       : {}
+Links             : {}
+ParsedHtml        : mshtml.HTMLDocumentClass
+RawContentLength  : 68
+
+
+
+MAIN OUTPUT: <h1>Hello from Volume Page</h1>
+
+
+PS C:\Users\User\OneDrive\Десктоп\kiii_1\docker-python-homework\nginx-volume-test> echo '<h1>Updated Volume Page</h1>' > index.html
+>>
+PS C:\Users\User\OneDrive\Десктоп\kiii_1\docker-python-homework\nginx-volume-test> curl http://localhost:8085
+>>
+
+Security Warning: Script Execution Risk
+Invoke-WebRequest parses the content of the web page. Script code in the web page might be run when the page is parsed.
+      RECOMMENDED ACTION:
+      Use the -UseBasicParsing switch to avoid script code execution.
+
+      Do you want to continue?
+
+[Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "N"): Y
+
+
+StatusCode        : 200
+StatusDescription : OK
+Content           : ÿþ<h1>Updated Volume Page</h1>
+
+RawContent        : HTTP/1.1 200 OK
+                    Connection: keep-alive
+                    Accept-Ranges: bytes
+                    Content-Length: 62
+                    Content-Type: text/html
+                    Date: Thu, 12 Mar 2026 11:36:03 GMT
+                    ETag: "69b2a519-3e"
+                    Last-Modified: Thu, 12 Mar 2026 11...
+Forms             : {}
+Headers           : {[Connection, keep-alive], [Accept-Ranges, bytes], [Content-Length, 62], [Content-Type, text/html]...}
+Images            : {}
+InputFields       : {}
+Links             : {}
+ParsedHtml        : mshtml.HTMLDocumentClass
+RawContentLength  : 62
+
+
+
+MAIN OUTPUT:
+<h1>Updated Volume Page</h1>

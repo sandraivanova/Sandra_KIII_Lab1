@@ -1,0 +1,162 @@
+git checkout -b topic
+Switched to a new branch 'topic'
+iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii
+PS C:\Users\User\OneDrive\Десктоп\kiii_1\solutions\act-02-git-lab> ls
+
+
+    Directory: C:\Users\User\OneDrive\Десктоп\kiii_1\solutions\act-02-git-lab
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----          3/4/2026  10:35 PM           1575 t1-branching-basics.txt
+-a----          3/4/2026  10:40 PM             34 t3-merge.txt
+
+
+PS C:\Users\User\OneDrive\Десктоп\kiii_1\solutions\act-02-git-lab> ls
+
+
+    Directory: C:\Users\User\OneDrive\Десктоп\kiii_1\solutions\act-02-git-lab
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----          3/4/2026  10:35 PM           1575 t1-branching-basics.txt
+-a----          3/4/2026  10:40 PM             34 t3-merge.txt
+
+
+PS C:\Users\User\OneDrive\Десктоп\kiii_1\solutions\act-02-git-lab> create branch topic
+create : The term 'create' is not recognized as the name of a cmdlet, function, script file, or 
+operable program. Check the spelling of the name, or if a path was included, verify that the path    
+is correct and try again.
+At line:1 char:1
++ create branch topic
++ ~~~~~~
+    + CategoryInfo          : ObjectNotFound: (create:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\User\OneDrive\Десктоп\kiii_1\solutions\act-02-git-lab> git checkout -b topic
+Switched to a new branch 'topic'
+PS C:\Users\User\OneDrive\Десктоп\kiii_1\solutions\act-02-git-lab> git add t3-merge.txt
+PS C:\Users\User\OneDrive\Десктоп\kiii_1\solutions\act-02-git-lab> git status
+On branch topic
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   t3-merge.txt
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   ../act-01-git-understanding/t5-init-add-commit.txt
+        modified:   ../act-01-git-understanding/t9-undo.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        t1-branching-basics.txt
+
+PS C:\Users\User\OneDrive\Десктоп\kiii_1\solutions\act-02-git-lab> git checkout master
+error: The following untracked working tree files would be overwritten by checkout:
+        solutions/act-02-git-lab/t1-branching-basics.txt
+Please move or remove them before you switch branches.
+Aborting
+PS C:\Users\User\OneDrive\Десктоп\kiii_1\solutions\act-02-git-lab> git status
+On branch topic
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   t3-merge.txt
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   ../act-01-git-understanding/t5-init-add-commit.txt
+        modified:   ../act-01-git-understanding/t9-undo.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        t1-branching-basics.txt
+
+PS C:\Users\User\OneDrive\Десктоп\kiii_1\solutions\act-02-git-lab> git checkout topic
+M       solutions/act-01-git-understanding/t5-init-add-commit.txt
+M       solutions/act-01-git-understanding/t9-undo.txt
+A       solutions/act-02-git-lab/t3-merge.txt
+Already on 'topic'
+PS C:\Users\User\OneDrive\Десктоп\kiii_1\solutions\act-02-git-lab> git commit -m "topic1"
+[topic 41103f0] topic1
+ 1 file changed, 2 insertions(+)
+ create mode 100644 solutions/act-02-git-lab/t3-merge.txt
+PS C:\Users\User\OneDrive\Десктоп\kiii_1\solutions\act-02-git-lab> git status
+On branch topic
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   ../act-01-git-understanding/t5-init-add-commit.txt
+        modified:   ../act-01-git-understanding/t9-undo.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        t1-branching-basics.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+PS C:\Users\User\OneDrive\Десктоп\kiii_1\solutions\act-02-git-lab> git checkout master
+error: The following untracked working tree files would be overwritten by checkout:
+        solutions/act-02-git-lab/t1-branching-basics.txt
+Please move or remove them before you switch branches.
+Aborting
+PS C:\Users\User\OneDrive\Десктоп\kiii_1\solutions\act-02-git-lab> git stash
+Saved working directory and index state WIP on topic: 41103f0 topic1
+PS C:\Users\User\OneDrive\Десктоп\kiii_1\solutions\act-02-git-lab> git switch master
+error: The following untracked working tree files would be overwritten by checkout:
+        solutions/act-02-git-lab/t1-branching-basics.txt
+Please move or remove them before you switch branches.
+Aborting
+PS C:\Users\User\OneDrive\Десктоп\kiii_1\solutions\act-02-git-lab> git restore --staged t1-branching-basics.txt
+>> git restore t1-branching-basics.txt
+error: pathspec 't1-branching-basics.txt' did not match any file(s) known to git
+error: pathspec 't1-branching-basics.txt' did not match any file(s) known to git
+PS C:\Users\User\OneDrive\Десктоп\kiii_1\solutions\act-02-git-lab> 
+PS C:\Users\User\OneDrive\Десктоп\kiii_1\solutions\act-02-git-lab> git status
+On branch topic
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        t1-branching-basics.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+PS C:\Users\User\OneDrive\Десктоп\kiii_1\solutions\act-02-git-lab> git add.
+git: 'add.' is not a git command. See 'git --help'.
+
+The most similar command is
+        add
+PS C:\Users\User\OneDrive\Десктоп\kiii_1\solutions\act-02-git-lab> git add .
+PS C:\Users\User\OneDrive\Десктоп\kiii_1\solutions\act-02-git-lab> git status
+On branch topic
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   t1-branching-basics.txt
+
+PS C:\Users\User\OneDrive\Десктоп\kiii_1\solutions\act-02-git-lab> git checkou master
+git: 'checkou' is not a git command. See 'git --help'.
+
+The most similar command is
+        checkout
+PS C:\Users\User\OneDrive\Десктоп\kiii_1\solutions\act-02-git-lab> git checkout master
+error: Your local changes to the following files would be overwritten by checkout:
+        solutions/act-02-git-lab/t1-branching-basics.txt
+Please commit your changes or stash them before you switch branches.
+Aborting
+PS C:\Users\User\OneDrive\Десктоп\kiii_1\solutions\act-02-git-lab> git branches
+git: 'branches' is not a git command. See 'git --help'.
+PS C:\Users\User\OneDrive\Десктоп\kiii_1\solutions\act-02-git-lab> git branch
+  master
+  newBranch
+  task3
+* topic
+PS C:\Users\User\OneDrive\Десктоп\kiii_1\solutions\act-02-git-lab> git checkout task3
+A       solutions/act-02-git-lab/t1-branching-basics.txt
+Switched to branch 'task3'
+PS C:\Users\User\OneDrive\Десктоп\kiii_1\solutions\act-02-git-lab> git status
+On branch task3
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   t1-branching-basics.txt
+
+PS C:\Users\User\OneDrive\Десктоп\kiii_1\solutions\act-02-git-lab> 

@@ -1,0 +1,30 @@
+git config --global alias.unstage "reset HEAD --"
+PS C:\Users\User\OneDrive\Десктоп\kiii_1\solutions\act-03-git-homework> git config --global alias.last "log -1 HEAD"
+PS C:\Users\User\OneDrive\Десктоп\kiii_1\solutions\act-03-git-homework> git config alias.unstage
+>> reset HEAD --
+reset HEAD --
+Invalid parameter(s)
+RESET { SESSION }
+
+git config alias.last
+log -1 HEAD
+
+git add t7-aliases.txt
+PS C:\Users\User\OneDrive\Десктоп\kiii_1\solutions\act-03-git-homework> git unstage alias.txt
+>> 
+Unstaged changes after reset:
+M       solutions/act-03-git-homework/t3-rebase.txt
+
+git add t7-aliases.txt
+PS C:\Users\User\OneDrive\Десктоп\kiii_1\solutions\act-03-git-homework> git commit -m "test alias commit"
+>>
+[topicHomework b50bd99] test alias commit
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 solutions/act-03-git-homework/t7-aliases.txt
+PS C:\Users\User\OneDrive\Десктоп\kiii_1\solutions\act-03-git-homework> git last
+commit b50bd99d1acf7c174ceb5e4cad62c3a1adc7e57c (HEAD -> topicHomework)
+Author: Sandra Ivanova <sandraivanova1@yahoo.com>
+Date:   Thu Mar 5 10:28:47 2026 +0100
+
+    test alias commit
+PS C:\Users\User\OneDrive\Десктоп\kiii_1\solutions\act-03-git-homework> 

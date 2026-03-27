@@ -1,0 +1,34 @@
+commands: docker run --name myubuntu -it ubuntu:22.04 /bin/bash
+output:
+root@cc654e658124:/#
+
+
+commands: exit
+output:
+exit
+
+
+commands: docker start myubuntu
+output:
+myubuntu
+
+
+commands: docker attach myubuntu
+output:
+root@cc654e658124:/#
+
+
+commands: exit
+output:
+exit
+
+
+commands: docker stop myubuntu
+output:
+myubuntu
+
+
+commands: docker logs myubuntu
+output:
+root@cc654e658124:/# exit
+exit

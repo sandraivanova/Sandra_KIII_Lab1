@@ -1,0 +1,133 @@
+
+User@DESKTOP-PFI287E MINGW64 ~/OneDrive/Десктоп/kiii_1/compose-lab (topicHomework)
+$ docker compose logs web
+web-1  | Starting Redis Server
+web-1  | 1:C 19 Mar 2026 11:20:00.993 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+web-1  | 1:C 19 Mar 2026 11:20:00.993 * Redis version=8.6.1, bits=64, commit=00000000, modified=1, pid=1, just started
+web-1  | 1:C 19 Mar 2026 11:20:00.993 * Configuration loaded
+web-1  | 1:M 19 Mar 2026 11:20:00.994 * monotonic clock: POSIX clock_gettime
+web-1  | 1:M 19 Mar 2026 11:20:00.995 * Running mode=standalone, port=6379.
+web-1  | 1:M 19 Mar 2026 11:20:00.996 * <bf> RedisBloom version 8.6.0 (Git=unknown)
+web-1  | 1:M 19 Mar 2026 11:20:00.996 * <bf> Registering configuration options: [
+web-1  | 1:M 19 Mar 2026 11:20:00.996 * <bf>    { bf-error-rate       :      0.01 }
+web-1  | 1:M 19 Mar 2026 11:20:00.996 * <bf>    { bf-initial-size     :       100 }
+web-1  | 1:M 19 Mar 2026 11:20:00.996 * <bf>    { bf-expansion-factor :         2 }
+web-1  | 1:M 19 Mar 2026 11:20:00.996 * <bf>    { cf-bucket-size      :         2 }
+web-1  | 1:M 19 Mar 2026 11:20:00.996 * <bf>    { cf-initial-size     :      1024 }
+web-1  | 1:M 19 Mar 2026 11:20:00.996 * <bf>    { cf-max-iterations   :        20 }
+web-1  | 1:M 19 Mar 2026 11:20:00.996 * <bf>    { cf-expansion-factor :         1 }
+web-1  | 1:M 19 Mar 2026 11:20:00.996 * <bf>    { cf-max-expansions   :        32 }
+web-1  | 1:M 19 Mar 2026 11:20:00.996 * <bf> ]
+web-1  | 1:M 19 Mar 2026 11:20:00.997 * Module 'bf' loaded from /usr/local/lib/redis/modules//redisbloom.so
+web-1  | 1:M 19 Mar 2026 11:20:01.030 * <search> Redis version found by RedisSearch : 8.6.1 - oss
+web-1  | 1:M 19 Mar 2026 11:20:01.030 * <search> RediSearch version 8.6.0 (Git=7782b97)
+web-1  | 1:M 19 Mar 2026 11:20:01.030 * <search> Low level api version 1 initialized successfully
+web-1  | 1:M 19 Mar 2026 11:20:01.031 * <search> gc: ON, prefix min length: 2, min word length to stem: 4, prefix max expansions: 200, query timeout (ms): 500, timeout policy: return, oom policy: return, cursor read size: 1000, cursor max idle (ms): 300000, max doctable size: 1000000, max number of search results:  1000000, default scorer: BM25STD,
+web-1  | 1:M 19 Mar 2026 11:20:01.032 * <search> Initialized thread pools!
+web-1  | 1:M 19 Mar 2026 11:20:01.032 * <search> Disabled workers threadpool of size 0
+web-1  | 1:M 19 Mar 2026 11:20:01.034 * <search> Subscribe to config changes
+web-1  | 1:M 19 Mar 2026 11:20:01.034 * <search> Subscribe to cluster slot migration events
+web-1  | 1:M 19 Mar 2026 11:20:01.034 * <search> Enabled role change notification
+web-1  | 1:M 19 Mar 2026 11:20:01.034 * <search> Cluster configuration: AUTO partitions, type: 0, coordinator timeout: 0ms
+web-1  | 1:M 19 Mar 2026 11:20:01.036 * Module 'search' loaded from /usr/local/lib/redis/modules//redisearch.so
+web-1  | 1:M 19 Mar 2026 11:20:01.041 * <timeseries> RedisTimeSeries version 80600, git_sha=05fd355db748676861dc4c17d19c8c1ca74c0154
+web-1  | 1:M 19 Mar 2026 11:20:01.041 * <timeseries> Redis version found by RedisTimeSeries : 8.6.1 - oss
+web-1  | 1:M 19 Mar 2026 11:20:01.041 * <timeseries> Registering configuration options: [
+web-1  | 1:M 19 Mar 2026 11:20:01.041 * <timeseries>    { ts-compaction-policy   :              }
+web-1  | 1:M 19 Mar 2026 11:20:01.041 * <timeseries>    { ts-num-threads         :            3 }
+web-1  | 1:M 19 Mar 2026 11:20:01.041 * <timeseries>    { ts-retention-policy    :            0 }
+web-1  | 1:M 19 Mar 2026 11:20:01.041 * <timeseries>    { ts-duplicate-policy    :        block }
+web-1  | 1:M 19 Mar 2026 11:20:01.041 * <timeseries>    { ts-chunk-size-bytes    :         4096 }
+web-1  | 1:M 19 Mar 2026 11:20:01.041 * <timeseries>    { ts-encoding            :   compressed }
+web-1  | 1:M 19 Mar 2026 11:20:01.041 * <timeseries>    { ts-ignore-max-time-diff:            0 }
+web-1  | 1:M 19 Mar 2026 11:20:01.041 * <timeseries>    { ts-ignore-max-val-diff :     0.000000 }
+web-1  | 1:M 19 Mar 2026 11:20:01.041 * <timeseries> ]
+web-1  | 1:M 19 Mar 2026 11:20:01.042 * <timeseries> Detected redis oss
+web-1  | 1:M 19 Mar 2026 11:20:01.045 * <timeseries> Subscribe to ASM events
+web-1  | 1:M 19 Mar 2026 11:20:01.045 * <timeseries> Enabled diskless replication
+web-1  | 1:M 19 Mar 2026 11:20:01.045 * Module 'timeseries' loaded from /usr/local/lib/redis/modules//redistimeseries.so
+web-1  | 1:M 19 Mar 2026 11:20:01.059 * <ReJSON> Created new data type 'ReJSON-RL'
+web-1  | 1:M 19 Mar 2026 11:20:01.064 * <ReJSON> version: 80600 git sha: unknown branch: unknown
+web-1  | 1:M 19 Mar 2026 11:20:01.064 * <ReJSON> Exported RedisJSON_V1 API
+web-1  | 1:M 19 Mar 2026 11:20:01.064 * <ReJSON> Exported RedisJSON_V2 API
+web-1  | 1:M 19 Mar 2026 11:20:01.064 * <ReJSON> Exported RedisJSON_V3 API
+web-1  | 1:M 19 Mar 2026 11:20:01.064 * <ReJSON> Exported RedisJSON_V4 API
+web-1  | 1:M 19 Mar 2026 11:20:01.064 * <ReJSON> Exported RedisJSON_V5 API
+web-1  | 1:M 19 Mar 2026 11:20:01.064 * <ReJSON> Exported RedisJSON_V6 API
+web-1  | 1:M 19 Mar 2026 11:20:01.064 * <ReJSON> Enabled diskless replication
+web-1  | 1:M 19 Mar 2026 11:20:01.064 * <ReJSON> Initialized shared string cache, thread safe: true.
+web-1  | 1:M 19 Mar 2026 11:20:01.064 * Module 'ReJSON' loaded from /usr/local/lib/redis/modules//rejson.so
+web-1  | 1:M 19 Mar 2026 11:20:01.064 * <search> Acquired RedisJSON_V6 API
+web-1  | 1:M 19 Mar 2026 11:20:01.129 * Server initialized
+web-1  | 1:M 19 Mar 2026 11:20:01.130 * Ready to accept connections tcp
+web-1  | 1:M 19 Mar 2026 11:20:01.130 # WARNING: Redis does not require authentication and is not protected by network restrictions. Redis will accept connections from any IP address on any network interface.
+
+User@DESKTOP-PFI287E MINGW64 ~/OneDrive/Десктоп/kiii_1/compose-lab (topicHomework)
+$ docker compose logs redis
+redis-1  | Starting Redis Server
+redis-1  | 1:C 19 Mar 2026 11:20:00.968 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+redis-1  | 1:C 19 Mar 2026 11:20:00.968 * Redis version=8.6.1, bits=64, commit=00000000, modified=1, pid=1, just started
+redis-1  | 1:C 19 Mar 2026 11:20:00.968 * Configuration loaded
+redis-1  | 1:M 19 Mar 2026 11:20:00.969 * monotonic clock: POSIX clock_gettime
+redis-1  | 1:M 19 Mar 2026 11:20:00.973 * Running mode=standalone, port=6379.
+redis-1  | 1:M 19 Mar 2026 11:20:00.977 * <bf> RedisBloom version 8.6.0 (Git=unknown)
+redis-1  | 1:M 19 Mar 2026 11:20:00.977 * <bf> Registering configuration options: [
+redis-1  | 1:M 19 Mar 2026 11:20:00.977 * <bf>  { bf-error-rate       :      0.01 }
+redis-1  | 1:M 19 Mar 2026 11:20:00.977 * <bf>  { bf-initial-size     :       100 }
+redis-1  | 1:M 19 Mar 2026 11:20:00.977 * <bf>  { bf-expansion-factor :         2 }
+redis-1  | 1:M 19 Mar 2026 11:20:00.977 * <bf>  { cf-bucket-size      :         2 }
+redis-1  | 1:M 19 Mar 2026 11:20:00.977 * <bf>  { cf-initial-size     :      1024 }
+redis-1  | 1:M 19 Mar 2026 11:20:00.977 * <bf>  { cf-max-iterations   :        20 }
+redis-1  | 1:M 19 Mar 2026 11:20:00.977 * <bf>  { cf-expansion-factor :         1 }
+redis-1  | 1:M 19 Mar 2026 11:20:00.977 * <bf>  { cf-max-expansions   :        32 }
+redis-1  | 1:M 19 Mar 2026 11:20:00.977 * <bf> ]
+redis-1  | 1:M 19 Mar 2026 11:20:00.978 * Module 'bf' loaded from /usr/local/lib/redis/modules//redisbloom.so
+redis-1  | 1:M 19 Mar 2026 11:20:01.030 * <search> Redis version found by RedisSearch : 8.6.1 - oss
+redis-1  | 1:M 19 Mar 2026 11:20:01.030 * <search> RediSearch version 8.6.0 (Git=7782b97)
+redis-1  | 1:M 19 Mar 2026 11:20:01.030 * <search> Low level api version 1 initialized successfully
+redis-1  | 1:M 19 Mar 2026 11:20:01.031 * <search> gc: ON, prefix min length: 2, min word length to stem: 4, prefix max expansions: 200, query timeout (ms): 500, timeout policy: return, oom policy: return, cursor read size: 1000, cursor max idle (ms): 300000, max doctable size: 1000000, max number of search results:  1000000, default scorer: BM25STD,
+redis-1  | 1:M 19 Mar 2026 11:20:01.032 * <search> Initialized thread pools!
+redis-1  | 1:M 19 Mar 2026 11:20:01.032 * <search> Disabled workers threadpool of size 0
+redis-1  | 1:M 19 Mar 2026 11:20:01.034 * <search> Subscribe to config changes
+redis-1  | 1:M 19 Mar 2026 11:20:01.034 * <search> Subscribe to cluster slot migration events
+redis-1  | 1:M 19 Mar 2026 11:20:01.034 * <search> Enabled role change notification
+redis-1  | 1:M 19 Mar 2026 11:20:01.035 * <search> Cluster configuration: AUTO partitions, type: 0, coordinator timeout: 0ms
+redis-1  | 1:M 19 Mar 2026 11:20:01.036 * Module 'search' loaded from /usr/local/lib/redis/modules//redisearch.so
+redis-1  | 1:M 19 Mar 2026 11:20:01.041 * <timeseries> RedisTimeSeries version 80600, git_sha=05fd355db748676861dc4c17d19c8c1ca74c0154       
+redis-1  | 1:M 19 Mar 2026 11:20:01.041 * <timeseries> Redis version found by RedisTimeSeries : 8.6.1 - oss
+redis-1  | 1:M 19 Mar 2026 11:20:01.041 * <timeseries> Registering configuration options: [
+redis-1  | 1:M 19 Mar 2026 11:20:01.041 * <timeseries>  { ts-compaction-policy   :              }
+redis-1  | 1:M 19 Mar 2026 11:20:01.041 * <timeseries>  { ts-num-threads         :            3 }
+redis-1  | 1:M 19 Mar 2026 11:20:01.041 * <timeseries>  { ts-retention-policy    :            0 }
+redis-1  | 1:M 19 Mar 2026 11:20:01.041 * <timeseries>  { ts-duplicate-policy    :        block }
+redis-1  | 1:M 19 Mar 2026 11:20:01.041 * <timeseries>  { ts-chunk-size-bytes    :         4096 }
+redis-1  | 1:M 19 Mar 2026 11:20:01.041 * <timeseries>  { ts-encoding            :   compressed }
+redis-1  | 1:M 19 Mar 2026 11:20:01.041 * <timeseries>  { ts-ignore-max-time-diff:            0 }
+redis-1  | 1:M 19 Mar 2026 11:20:01.041 * <timeseries>  { ts-ignore-max-val-diff :     0.000000 }
+redis-1  | 1:M 19 Mar 2026 11:20:01.041 * <timeseries> ]
+redis-1  | 1:M 19 Mar 2026 11:20:01.042 * <timeseries> Detected redis oss
+redis-1  | 1:M 19 Mar 2026 11:20:01.044 * <timeseries> Subscribe to ASM events
+redis-1  | 1:M 19 Mar 2026 11:20:01.044 * <timeseries> Enabled diskless replication
+redis-1  | 1:M 19 Mar 2026 11:20:01.044 * Module 'timeseries' loaded from /usr/local/lib/redis/modules//redistimeseries.so
+redis-1  | 1:M 19 Mar 2026 11:20:01.059 * <ReJSON> Created new data type 'ReJSON-RL'
+redis-1  | 1:M 19 Mar 2026 11:20:01.064 * <ReJSON> version: 80600 git sha: unknown branch: unknown
+redis-1  | 1:M 19 Mar 2026 11:20:01.064 * <ReJSON> Exported RedisJSON_V1 API
+redis-1  | 1:M 19 Mar 2026 11:20:01.064 * <ReJSON> Exported RedisJSON_V2 API
+redis-1  | 1:M 19 Mar 2026 11:20:01.064 * <ReJSON> Exported RedisJSON_V3 API
+redis-1  | 1:M 19 Mar 2026 11:20:01.064 * <ReJSON> Exported RedisJSON_V4 API
+redis-1  | 1:M 19 Mar 2026 11:20:01.064 * <ReJSON> Exported RedisJSON_V5 API
+redis-1  | 1:M 19 Mar 2026 11:20:01.064 * <ReJSON> Exported RedisJSON_V6 API
+redis-1  | 1:M 19 Mar 2026 11:20:01.064 * <ReJSON> Enabled diskless replication
+redis-1  | 1:M 19 Mar 2026 11:20:01.065 * <ReJSON> Initialized shared string cache, thread safe: true.
+redis-1  | 1:M 19 Mar 2026 11:20:01.065 * Module 'ReJSON' loaded from /usr/local/lib/redis/modules//rejson.so
+redis-1  | 1:M 19 Mar 2026 11:20:01.065 * <search> Acquired RedisJSON_V6 API
+redis-1  | 1:M 19 Mar 2026 11:20:01.129 * Server initialized
+redis-1  | 1:M 19 Mar 2026 11:20:01.130 * Ready to accept connections tcp
+redis-1  | 1:M 19 Mar 2026 11:20:01.130 # WARNING: Redis does not require authentication and is not protected by network restrictions. Redis will accept connections from any IP address on any network interface.
+
+User@DESKTOP-PFI287E MINGW64 ~/OneDrive/Десктоп/kiii_1/compose-lab (topicHomework)
+$ docker compose ps
+NAME                  IMAGE          COMMAND                  SERVICE   CREATED         STATUS         PORTS
+compose-lab-redis-1   redis:alpine   "docker-entrypoint.s…"   redis     6 minutes ago   Up 6 minutes   6379/tcp
+compose-lab-web-1     redis:alpine   "docker-entrypoint.s…"   web       6 minutes ago   Up 6 minutes   0.0.0.0:5000->5000/tcp, 6379/tcp      
+Note:Name (compose-lab-web-1, compose-lab-redis-1) is the unique name of each container created by Docker Compose; State/Status (Up 6 minutes) shows that both services are currently running; Ports shows that the web service is mapped to the host on 0.0.0.0:5000->5000, while redis is only exposing port 6379 internally without host mapping.

@@ -1,0 +1,31 @@
+$ docker compose up -d
+[+] Running 3/3
+ ✔ Network compose-homework-app_default    Created
+ ✔ Container compose-homework-app-redis-1  Started
+ ✔ Container compose-homework-app-web-1    Started
+
+$ docker compose stop
+[+] Stopping 2/2
+ ✔ Container compose-homework-app-web-1    Stopped
+ ✔ Container compose-homework-app-redis-1  Stopped
+
+$ docker compose ps
+NAME                           IMAGE                 COMMAND                  SERVICE   CREATED          STATUS                     PORTS
+compose-homework-app-redis-1   redis                 "docker-entrypoint.s…"   redis     2 minutes ago    Exited (0) 5 seconds ago   6379/tcp
+compose-homework-app-web-1     jamtur01/composeapp   "python app.py"          web       2 minutes ago    Exited (0) 5 seconds ago   0.0.0.0:5000->5000/tcp
+
+$ docker compose up -d
+[+] Running 2/2
+ ✔ Container compose-homework-app-redis-1  Started
+ ✔ Container compose-homework-app-web-1    Started
+
+$ docker compose down
+[+] Running 3/3
+ ✔ Container compose-homework-app-web-1    Removed
+ ✔ Container compose-homework-app-redis-1  Removed
+ ✔ Network compose-homework-app_default    Removed
+
+$ docker compose ps
+NAME      IMAGE     COMMAND   SERVICE   CREATED   STATUS    PORTS
+
+Explanation: After `docker compose stop`, the containers remained in the project but were no longer running, which is why `docker compose ps` showed them as Exited. After `docker compose down`, the stopped containers and the project network were removed, so `docker compose ps` showed no containers.

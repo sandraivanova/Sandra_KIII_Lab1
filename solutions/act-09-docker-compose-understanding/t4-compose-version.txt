@@ -1,0 +1,6 @@
+PS C:\Users\User\OneDrive\Десктоп\kiii_1> docker compose version 
+Docker Compose version v2.34.0-desktop.1
+
+
+PS C:\Users\User\OneDrive\Десктоп\kiii_1> docker-compose --version
+Docker Compose version v2.34.0-desktop.1

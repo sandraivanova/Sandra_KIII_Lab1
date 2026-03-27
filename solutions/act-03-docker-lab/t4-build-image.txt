@@ -1,0 +1,87 @@
+PS C:\Users\User\OneDrive\Десктоп\kiii_1> mkdir docker-lab
+
+
+    Directory: C:\Users\User\OneDrive\Десктоп\kiii_1
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----         3/11/2026  11:52 PM                docker-lab
+
+PS C:\Users\User\OneDrive\Десктоп\kiii_1> cd docker-lab
+PS C:\Users\User\OneDrive\Десктоп\kiii_1\docker-lab> 
+
+User@DESKTOP-PFI287E MINGW64 ~/OneDrive/Десктоп/kiii_1/docker-lab (topicHomework)
+$ echo "FROM nginx:alpine" > Dockerfile
+
+User@DESKTOP-PFI287E MINGW64 ~/OneDrive/Десктоп/kiii_1/docker-lab (topicHomework)
+$ echo "RUN echo 'Hello from Docker Lab' > /usr/share/nginx/html/index.html" >> Dockerfile
+
+User@DESKTOP-PFI287E MINGW64 ~/OneDrive/Десктоп/kiii_1/docker-lab (topicHomework)
+$ echo "EXPOSE 80" >> Dockerfile
+
+User@DESKTOP-PFI287E MINGW64 ~/OneDrive/Десктоп/kiii_1/docker-lab (topicHomework)
+$ cat Dockerfile
+FROM nginx:alpine
+RUN echo 'Hello from Docker Lab' > /usr/share/nginx/html/index.html
+EXPOSE 80
+
+User@DESKTOP-PFI287E MINGW64 ~/OneDrive/Десктоп/kiii_1/docker-lab (topicHomework)
+$ docker build -t docker-lab-nginx:v1 .
+[+] Building 15.5s (6/6) FINISHED                                                                                   docker:desktop-linux
+ => [internal] load build definition from Dockerfile                                                                                0.0s
+ => => transferring dockerfile: 133B                                                                                                0.0s 
+ => [internal] load metadata for docker.io/library/nginx:alpine                                                                     2.3s 
+ => [internal] load .dockerignore                                                                                                   0.0s
+ => => transferring context: 2B                                                                                                     0.0s 
+ => [1/2] FROM docker.io/library/nginx:alpine@sha256:f46cb72c7df02710e693e863a983ac42f6a9579058a59a35f1ae36c9958e4ce0              11.9s 
+ => => resolve docker.io/library/nginx:alpine@sha256:f46cb72c7df02710e693e863a983ac42f6a9579058a59a35f1ae36c9958e4ce0               0.0s 
+ => => sha256:c32126d2b96c212b17a4fa8384c2aaf3e3418d4b2988c303df255de884a2a73a 1.40kB / 1.40kB                                      0.4s
+ => => sha256:c24026275c332ec39b54c7094c7ce6d97b0dde17bb91e53b4b2d7dd88da7d8f0 20.25MB / 20.25MB                                   11.2s
+ => => sha256:1f25242adbdb4bf04c16ac9fbe5385a46cf0f1fbee7d8e7945ef342b794d1bf1 1.21kB / 1.21kB                                      0.8s 
+ => => sha256:1549d7aec9620db68aa7a5ea05aa08590d8f46598bb4b4e0e356753b44c694d4 403B / 403B                                          0.8s 
+ => => sha256:e19aff8f2cce9241a3cbb1f501d16d9d76b7f22e7b544f4e373d8b22496bfcaf 952B / 952B                                          0.5s
+ => => sha256:593488f95c358628770935110ccf26bd7b3aba382b10126980e630a6dd2757fc 626B / 626B                                          0.4s
+ => => sha256:d2a46166eee6d30856269bbf4ad826481d04dd4108aca73e3e974fab7fdb6dad 1.87MB / 1.87MB                                      4.7s 
+ => => sha256:589002ba0eaed121a1dbf42f6648f29e5be55d5c8a6ee0f8eaa0285cc21ac153 3.86MB / 3.86MB                                      7.6s
+ => => extracting sha256:589002ba0eaed121a1dbf42f6648f29e5be55d5c8a6ee0f8eaa0285cc21ac153                                           0.2s
+ => => extracting sha256:d2a46166eee6d30856269bbf4ad826481d04dd4108aca73e3e974fab7fdb6dad                                           0.2s
+ => => extracting sha256:593488f95c358628770935110ccf26bd7b3aba382b10126980e630a6dd2757fc                                           0.0s
+ => => extracting sha256:e19aff8f2cce9241a3cbb1f501d16d9d76b7f22e7b544f4e373d8b22496bfcaf                                           0.0s 
+ => => extracting sha256:1549d7aec9620db68aa7a5ea05aa08590d8f46598bb4b4e0e356753b44c694d4                                           0.0s
+ => => extracting sha256:1f25242adbdb4bf04c16ac9fbe5385a46cf0f1fbee7d8e7945ef342b794d1bf1                                           0.0s 
+ => => extracting sha256:c32126d2b96c212b17a4fa8384c2aaf3e3418d4b2988c303df255de884a2a73a                                           0.0s 
+ => => extracting sha256:c24026275c332ec39b54c7094c7ce6d97b0dde17bb91e53b4b2d7dd88da7d8f0                                           0.5s 
+ => [2/2] RUN echo 'Hello from Docker Lab' > /usr/share/nginx/html/index.html                                                       0.8s 
+ => exporting to image                                                                                                              0.3s 
+ => => exporting layers                                                                                                             0.1s 
+ => => exporting manifest sha256:4051521d0884ab1904884f80f9c5666fd6c88917df0b2d885d747c60e9f8c7d9                                   0.0s 
+ => => exporting config sha256:600803427c51e9cfe0be6693cd18c379714a89feff2b2084a1d7b2cc8a060ba4                                     0.0s 
+ => => exporting attestation manifest sha256:9f6dc0b15e10467121378204c3d858e722e24ab1fc979dbdca5dded4d779e4c7                       0.0s 
+ => => exporting manifest list sha256:cbc7512f44fc3a0ac012fd4f1a8723be4deb2644bf6dc6239a11fc2c39934c24                              0.0s 
+ => => naming to docker.io/library/docker-lab-nginx:v1                                                                              0.0s 
+ => => unpacking to docker.io/library/docker-lab-nginx:v1                                                                           0.0s 
+
+User@DESKTOP-PFI287E MINGW64 ~/OneDrive/Десктоп/kiii_1/docker-lab (topicHomework)
+$ docker images
+REPOSITORY                    TAG              IMAGE ID       CREATED         SIZE
+docker-lab-nginx              v1               cbc7512f44fc   6 seconds ago   92.6MB
+nginx                         latest           bc45d248c4e1   25 hours ago    237MB
+postgres                      16               e4842c8a99ca   3 weeks ago     636MB
+ubuntu                        22.04            3ba65aa20f86   4 weeks ago     117MB
+ubuntu                        latest           d1e2e92c075e   4 weeks ago     117MB
+sandraivanova1/si-2025-lab3   feature-latest   65f3157db598   9 months ago    73.6MB
+sandraivanova1/si-2025-lab3   master-latest    2625e07decd1   9 months ago    73.6MB
+src-monitor                   latest           745e5ee98e21   10 months ago   642MB
+src-sensor                    latest           c931389077c5   10 months ago   642MB
+hellp-world-java              latest           b28a4789ead2   10 months ago   633MB
+my-nginx                      0.1              7fc58ca28695   10 months ago   249MB
+debian_nginx                  latest           78021def11d9   10 months ago   251MB
+debian                        11-slim          fdd75562fdcd   10 months ago   123MB
+hello-dock                    latest           9e34b3120b38   10 months ago   230MB
+<none>                        <none>           1e622c5f073b   11 months ago   117MB
+postgres                      17.4             304ab8135187   12 months ago   621MB
+alpine                        latest           a8560b36e8b8   13 months ago   12.1MB
+hello-world                   latest           c41088499908   13 months ago   20.4kB
+busybox                       latest           37f7b378a29c   17 months ago   6.55MB
+

@@ -1,0 +1,28 @@
+User@DESKTOP-PFI287E MINGW64 ~/OneDrive/Десктоп/kiii_1 (topicHomework)
+$ docker compose stop
+[+] Stopping 2/2
+ ✔ Container kiii_1-redis-1  Stopped                                                                                                    0.0s 
+ ✔ Container kiii_1-web-1    Stopped 
+ # NOTE: stop ги стопира контејнерите, но НЕ ги брише (остануваат постоечки)
+
+User@DESKTOP-PFI287E MINGW64 ~/OneDrive/Десктоп/kiii_1 (topicHomework)
+$ docker compose ps
+NAME             IMAGE          COMMAND                  SERVICE   CREATED          STATUS         PORTS
+kiii_1-redis-1   redis:alpine   "docker-entrypoint.s…"   redis     11 minutes ago   Up 8 seconds   6379/tcp
+kiii_1-web-1     nginx:alpine   "/docker-entrypoint.…"   web       11 minutes ago   Up 8 seconds   0.0.0.0:8080->80/tcp
+# NOTE: ps покажува дека контејнерите постојат, но се стопирани (Exited)
+
+User@DESKTOP-PFI287E MINGW64 ~/OneDrive/Десктоп/kiii_1 (topicHomework)
+$ docker compose rm -f
+[+] Removing 2/2
+ ✔ Container kiii_1-web-1    Removed
+ ✔ Container kiii_1-redis-1  Removed
+# NOTE: rm -f ги брише контејнерите, но НЕ ги брише network-ите
+
+User@DESKTOP-PFI287E MINGW64 ~/OneDrive/Десктоп/kiii_1 (topicHomework)
+$ docker compose down
+[+] Running 3/3
+ ✔ Container kiii_1-redis-1  Removed                                                                                                    0.7s 
+ ✔ Container kiii_1-web-1    Removed                                                                                                    1.0s 
+ ✔ Network kiii_1_default    Removed                                                                                                    0.8s 
+# NOTE: down ги брише преостанатите ресурси како network (и контејнери ако постојат)

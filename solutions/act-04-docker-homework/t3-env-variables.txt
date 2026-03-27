@@ -1,0 +1,13 @@
+PS C:\Users\User\OneDrive\Десктоп\kiii_1\docker-python-homework\nginx-volume-test> docker run -e USER_NAME=DockerStudent ubuntu:22.04 env
+>> 
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+HOSTNAME=74fc9013f2dc
+USER_NAME=DockerStudent
+HOME=/root
+
+PS C:\Users\User\OneDrive\Десктоп\kiii_1\docker-python-homework\nginx-volume-test> docker run -it -e COURSE=CI_CD ubuntu:22.04 /bin/bash
+root@237d6d10135d:/# env | grep COURSE
+COURSE=CI_CD
+root@237d6d10135d:/# exit
+exit
+PS C:\Users\User\O

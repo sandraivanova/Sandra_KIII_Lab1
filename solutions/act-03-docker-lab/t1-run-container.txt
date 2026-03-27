@@ -1,0 +1,21 @@
+PS C:\Users\User\OneDrive\Десктоп\kiii_1>$ docker pull ubuntu:22.04 
+22.04: Pulling from library/ubuntu
+b1cba2e842ca: Pull complete
+Digest: sha256:3ba65aa20f86a0fad9df2b2c259c613df006b2e6d0bfcc8a146afb8c525a9751
+Status: Downloaded newer image for ubuntu:22.04
+docker.io/library/ubuntu:22.04
+
+PS C:\Users\User\OneDrive\Десктоп\kiii_1> docker run -it ubuntu:22.04 /bin/bash
+root@271acbdf757d:/# ls /
+bin  boot  dev  etc  home  lib  lib32  lib64  libx32  media  mnt  opt  proc  root  run  sbin  srv  sys  tmp  usr  var
+root@271acbdf757d:/# exit
+exit
+PS C:\Users\User\OneDrive\Десктоп\kiii_1> docker ps -a
+CONTAINER ID   IMAGE           COMMAND                  CREATED          STATUS                        PORTS     NAMES
+271acbdf757d   ubuntu:22.04    "/bin/bash"              49 seconds ago   Exited (0) 10 seconds ago               busy_germain
+562d6c29f871   ubuntu:22.04    "C:/Program Files/Gi…"   2 minutes ago    Created                                 clever_fermat
+1b280118a79b   ubuntu          "/bin/bash"              19 minutes ago   Exited (127) 18 minutes ago             affectionate_hellman
+63ded27eb96b   postgres:17.4   "docker-entrypoint.s…"   2 days ago       Exited (0) 23 minutes ago               emt-lab-db-1
+f752f5a158ae   postgres:17.4   "docker-entrypoint.s…"   3 days ago       Exited (0) 22 minutes ago               e-shop-backend-db-1
+efe4a6742ee4   postgres:16     "docker-entrypoint.s…"   2 weeks ago      Exited (0) 22 minutes ago               cinema_db
+2cceac06bba8   postgres:17.4   "docker-entrypoint.s…"   3 months ago     Exited (128) 3 days ago                 web_programing_lab2-db-1

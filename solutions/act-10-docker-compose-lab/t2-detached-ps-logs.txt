@@ -1,0 +1,26 @@
+$ docker compose up -d
+[+] Running 3/3
+ ✔ Network compose-lab_default    Created
+ ✔ Container compose-lab-web-1    Started
+ ✔ Container compose-lab-redis-1  Started
+
+$ docker compose ps
+NAME                  IMAGE          COMMAND                  SERVICE   CREATED          STATUS          PORTS
+compose-lab-redis-1   redis:alpine   "docker-entrypoint.s…"   redis     32 seconds ago   Up 31 seconds   6379/tcp
+compose-lab-web-1     redis:alpine   "docker-entrypoint.s…"   web       32 seconds ago   Up 31 seconds   0.0.0.0:5000->5000/tcp, 6379/tcp
+
+$ docker compose logs
+web-1    | Starting Redis Server
+redis-1  | Starting Redis Server
+redis-1  | 1:C 19 Mar 2026 11:20:00.968 * Redis is starting
+redis-1  | 1:M 19 Mar 2026 11:20:01.130 * Ready to accept connections tcp
+web-1    | 1:C 19 Mar 2026 11:20:00.993 * Redis is starting
+web-1    | 1:M 19 Mar 2026 11:20:01.130 * Ready to accept connections tcp
+
+$ docker compose logs -f
+web-1    | Starting Redis Server
+redis-1  | Starting Redis Server
+web-1    | 1:M 19 Mar 2026 11:20:01.130 * Ready to accept connections tcp
+redis-1  | 1:M 19 Mar 2026 11:20:01.130 * Ready to accept connections tcp
+
+^C

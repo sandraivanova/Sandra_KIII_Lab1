@@ -1,0 +1,42 @@
+PS C:\Users\User\OneDrive\Десктоп\kiii_1> docker pull nginx:latest
+latest: Pulling from library/nginx
+df9da45c1db2: Pull complete
+79697674b897: Pull complete
+a9d395129dce: Pull complete
+9eef040df109: Pull complete
+206356c42440: Pull complete
+18a071c04bd1: Pull complete
+75a1d70aee50: Pull complete
+Digest: sha256:bc45d248c4e1d1709321de61566eb2b64d4f0e32765239d66573666be7f13349
+Status: Downloaded newer image for nginx:latest
+docker.io/library/nginx:latest
+PS C:\Users\User\OneDrive\Десктоп\kiii_1> docker images
+REPOSITORY                    TAG              IMAGE ID       CREATED         SIZE
+nginx                         latest           bc45d248c4e1   24 hours ago    237MB
+postgres                      16               e4842c8a99ca   3 weeks ago     636MB
+ubuntu                        22.04            3ba65aa20f86   4 weeks ago     117MB
+ubuntu                        latest           d1e2e92c075e   4 weeks ago     117MB
+sandraivanova1/si-2025-lab3   feature-latest   65f3157db598   9 months ago    73.6MB
+sandraivanova1/si-2025-lab3   master-latest    2625e07decd1   9 months ago    73.6MB
+src-monitor                   latest           745e5ee98e21   10 months ago   642MB
+src-sensor                    latest           c931389077c5   10 months ago   642MB
+hellp-world-java              latest           b28a4789ead2   10 months ago   633MB
+my-nginx                      0.1              7fc58ca28695   10 months ago   249MB
+debian_nginx                  latest           78021def11d9   10 months ago   251MB
+debian                        11-slim          fdd75562fdcd   10 months ago   123MB
+hello-dock                    latest           9e34b3120b38   10 months ago   230MB
+<none>                        <none>           1e622c5f073b   11 months ago   117MB
+postgres                      17.4             304ab8135187   12 months ago   621MB
+alpine                        latest           a8560b36e8b8   13 months ago   12.1MB
+hello-world                   latest           c41088499908   13 months ago   20.4kB
+busybox                       latest           37f7b378a29c   17 months ago   6.55MB
+PS C:\Users\User\OneDrive\Десктоп\kiii_1> docker run -d -p 8080:80 nginx:latest
+9ffa4c27e038215131d195e94bead89d22f934210a441f26e5d0f4494b4a730c
+PS C:\Users\User\OneDrive\Десктоп\kiii_1> docker ps
+CONTAINER ID   IMAGE          COMMAND                  CREATED         STATUS         PORTS                  NAMES
+9ffa4c27e038   nginx:latest   "/docker-entrypoint.…"   9 seconds ago   Up 8 seconds   0.0.0.0:8080->80/tcp   sweet_greider
+PS C:\Users\User\OneDrive\Десктоп\kiii_1> docker stop 9ffa4c27e038
+9ffa4c27e038
+PS C:\Users\User\OneDrive\Десктоп\kiii_1> docker rm 9ffa4c27e038
+9ffa4c27e038
+PS C:\Users\User\OneDrive\Десктоп\kiii_1> 

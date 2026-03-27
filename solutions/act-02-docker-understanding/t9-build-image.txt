@@ -1,0 +1,61 @@
+
+User@DESKTOP-PFI287E MINGW64 ~/OneDrive/Десктоп/kiii_1 (topicHomework)
+$ echo FROM ubuntu > Dockerfile
+
+User@DESKTOP-PFI287E MINGW64 ~/OneDrive/Десктоп/kiii_1 (topicHomework)
+$ echo CMD ["echo", "Hello from Docker image"] >> Dockerfile
+
+User@DESKTOP-PFI287E MINGW64 ~/OneDrive/Десктоп/kiii_1 (topicHomework)
+$ docker build -t myimage:v1 .
+[+] Building 1.9s (5/5) FINISHED                                                                         docker:desktop-linux
+ => [internal] load build definition from Dockerfile                                                                     0.1s
+ => => transferring dockerfile: 85B                                                                                      0.0s
+ => [internal] load metadata for docker.io/library/ubuntu:latest                                                         0.1s
+ => [internal] load .dockerignore                                                                                        0.0s
+ => => transferring context: 2B                                                                                          0.0s
+ => [1/1] FROM docker.io/library/ubuntu:latest@sha256:d1e2e92c075e5ca139d51a140fff46f84315c0fdce203eab2807c7e495eff4f9   1.4s
+ => => resolve docker.io/library/ubuntu:latest@sha256:d1e2e92c075e5ca139d51a140fff46f84315c0fdce203eab2807c7e495eff4f9   1.3s
+ => exporting to image                                                                                                   0.1s
+ => => exporting layers                                                                                                  0.0s
+ => => exporting manifest sha256:d09d3022ae6ad2efa2e867b7fc35322c7dc2d17b79f2bf843c4d894c2eccdf90                        0.0s
+ => => exporting config sha256:550bb4be79846098b746579c79eb44a895fde320c20951df14b08ca2f46960fe                          0.0s
+ => => exporting attestation manifest sha256:d0e120a57f4aa3eb4628abb02adcbac4177fa49bc208325613883cf4cc52aef2            0.0s 
+ => => exporting manifest list sha256:ec051b388c7d458a8aa5d3bd1af9cbcbc462743f749a49e2fe8a45b5e5e380ed                   0.0s
+ => => naming to docker.io/library/myimage:v1                                                                            0.0s 
+ => => unpacking to docker.io/library/myimage:v1                                                                         0.0s 
+
+ 1 warning found (use docker --debug to expand):
+ - JSONArgsRecommended: JSON arguments recommended for CMD to prevent unintended behavior related to OS signals (line 2)      
+
+User@DESKTOP-PFI287E MINGW64 ~/OneDrive/Десктоп/kiii_1 (topicHomework)
+$ docker images
+REPOSITORY                    TAG              IMAGE ID       CREATED         SIZE
+postgres                      16               e4842c8a99ca   3 weeks ago     636MB
+myimage                       v1               ec051b388c7d   4 weeks ago     117MB
+ubuntu                        latest           d1e2e92c075e   4 weeks ago     117MB
+sandraivanova1/si-2025-lab3   feature-latest   65f3157db598   9 months ago    73.6MB
+sandraivanova1/si-2025-lab3   master-latest    2625e07decd1   9 months ago    73.6MB
+src-monitor                   latest           745e5ee98e21   10 months ago   642MB
+src-sensor                    latest           c931389077c5   10 months ago   642MB
+hellp-world-java              latest           b28a4789ead2   10 months ago   633MB
+my-nginx                      0.1              7fc58ca28695   10 months ago   249MB
+debian_nginx                  latest           78021def11d9   10 months ago   251MB
+debian                        11-slim          fdd75562fdcd   10 months ago   123MB
+hello-dock                    latest           9e34b3120b38   10 months ago   230MB
+<none>                        <none>           1e622c5f073b   11 months ago   117MB
+postgres                      17.4             304ab8135187   12 months ago   621MB
+alpine                        latest           a8560b36e8b8   13 months ago   12.1MB
+hello-world                   latest           c41088499908   13 months ago   20.4kB
+busybox                       latest           37f7b378a29c   17 months ago   6.55MB
+
+User@DESKTOP-PFI287E MINGW64 ~/OneDrive/Десктоп/kiii_1 (topicHomework)
+$ docker rmi myimage
+Error response from daemon: No such image: myimage:latest
+
+User@DESKTOP-PFI287E MINGW64 ~/OneDrive/Десктоп/kiii_1 (topicHomework)
+$ docker rmi myimage:v1
+Untagged: myimage:v1
+Deleted: sha256:ec051b388c7d458a8aa5d3bd1af9cbcbc462743f749a49e2fe8a45b5e5e380ed
+
+User@DESKTOP-PFI287E MINGW64 ~/OneDrive/Десктоп/kiii_1 (topicHomework)
+$

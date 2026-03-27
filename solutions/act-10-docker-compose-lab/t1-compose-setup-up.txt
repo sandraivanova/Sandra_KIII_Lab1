@@ -1,0 +1,39 @@
+User@DESKTOP-PFI287E MINGW64 ~/OneDrive/Десктоп/kiii_1 (topicHomework)
+$ mkdir compose-lab
+
+User@DESKTOP-PFI287E MINGW64 ~/OneDrive/Десктоп/kiii_1 (topicHomework)
+$ cd compose-lab
+
+User@DESKTOP-PFI287E MINGW64 ~/OneDrive/Десктоп/kiii_1/compose-lab (topicHomework)
+$ nano docker-compose.yml
+the file:
+services:
+  web:
+    image: python:3.10
+    ports:
+      - "5000:5000"
+    volumes:
+      - .:/composeapp
+
+  redis:
+    image: redis:alpine
+
+User@DESKTOP-PFI287E MINGW64 ~/OneDrive/Десктоп/kiii_1/compose-lab (topicHomework)
+$ docker compose version
+Docker Compose version v2.34.0-desktop.1  
+
+$ docker compose up
+[+] Running 3/3
+ ✔ Network compose-lab_default  Created
+ ✔ Container compose-lab-redis-1  Created
+ ✔ Container compose-lab-web-1    Created
+Attaching to web-1, redis-1
+
+redis-1  | 1:C ... Redis is starting
+redis-1  | 1:M ... Ready to accept connections
+web-1    | Python 3.10 container started
+
+^C
+Gracefully stopping... (press Ctrl+C again to force)
+ ✔ Container compose-lab-web-1    Stopped
+ ✔ Container compose-lab-redis-1  Stopped

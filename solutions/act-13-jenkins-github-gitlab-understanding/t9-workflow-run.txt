@@ -1,0 +1,5 @@
+During my work with GitHub Actions, I observed a workflow run named “CI Pipeline” as shown in the Actions tab of the 
+repository. The workflow was triggered by a push event after committing changes to the main branch. The run consisted of
+ two jobs: build and test, where the build job compiled the project and the test job executed the automated tests. Both jobs 
+ completed successfully, and the overall workflow run status was success, indicating that the code changes were correctly 
+ built and passed all tests.

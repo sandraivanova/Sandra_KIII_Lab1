@@ -1,0 +1,21 @@
+PS C:\Users\User\OneDrive\Десктоп\kiii_1\solutions\act-02-git-lab> git remote -v
+origin  https://github.com/sandraivanova/Sandra_KIII_Lab1.git (fetch)
+origin  https://github.com/sandraivanova/Sandra_KIII_Lab1.git (push)
+PS C:\Users\User\OneDrive\Десктоп\kiii_1\solutions\act-02-git-lab>  git remote add origin https://github.com/sandraivanova/Sandra_KIII_Lab1.git
+error: remote origin already exists.
+PS C:\Users\User\OneDrive\Десктоп\kiii_1\solutions\act-02-git-lab> git push -u origin master
+Enumerating objects: 19, done.
+Counting objects: 100% (19/19), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (14/14), done.
+Writing objects: 100% (19/19), 2.12 KiB | 197.00 KiB/s, done.
+Total 19 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), done.
+remote:
+remote: Create a pull request for 'master' on GitHub by visiting:
+remote:      https://github.com/sandraivanova/Sandra_KIII_Lab1/pull/new/master
+remote:
+To https://github.com/sandraivanova/Sandra_KIII_Lab1.git
+ * [new branch]      master -> master
+branch 'master' set up to track 'origin/master'.
+PS C:\Users\User\OneDrive\Десктоп\kiii_1\solutions\act-02-git-lab> 
